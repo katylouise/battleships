@@ -8,7 +8,7 @@ Create a simulation of the classic game Battleships.
 Implementation
 _______________
 
--Class Responsbility Collaborators:
+- Class Responsbility Collaborators:
 
 | Class : Board     | Responsibilities | Collaborators   |
 | :------- | ----: | :---: |
@@ -25,7 +25,7 @@ _______________
 | | fire - hit/miss   |    |
 | | sunk? |
 
--Coded using Ruby and RSpec.
+- Coded using Ruby and RSpec.
 
 Authors
 ________
