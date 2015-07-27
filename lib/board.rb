@@ -8,8 +8,8 @@ class Board
     @grid = [[]]
   end
 
-  def place ship
-    grid[ship.location[0]][ship.location[1]] = 1
+  def place(ship, location)
+    grid[location[0]][location[1]] = ship
     ship
   end
 end
