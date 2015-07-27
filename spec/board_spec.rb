@@ -13,17 +13,12 @@ describe Board do
   #   expect(subject.place(ship)).to eq ship
   # end
 
-  # it "when we place a ship it is added to the grid" do
-  #  # allow(ship).to receive(:location)
-  #   location = [0, 0]
-  #   subject.place(ship, location)
-  #   expect(subject.grid).not_to be_empty
-  # end
-
-  it "has placed a ship in the grid" do
+  it "has placed a ship in the coordinates array" do
     location = [0, 0]
+    allow(ship).to receive(:direction) { :E }
+    allow(ship).to receive(:length) { 3 }
     subject.place(ship, location)
-    expect(subject.grid).to include([ship])
+    expect(subject.coordinates).not_to be_empty
   end
 
 end
