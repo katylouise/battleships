@@ -1,12 +1,16 @@
 class Ship
 
-  attr_reader :location
+  DEFAULT_MIN_LENGTH = 2
+  DEFAULT_MAX_LENGTH = 5
 
-  def initialize
-    @location = 0
+  attr_reader :length
+
+  def initialize(length)
+    if length.between?(DEFAULT_MIN_LENGTH, DEFAULT_MAX_LENGTH)
+      @length = length
+    else
+      fail "Invalid ship size"
+    end
   end
 
-  def set_location(coordinates)
-    @location = coordinates
-  end
 end
